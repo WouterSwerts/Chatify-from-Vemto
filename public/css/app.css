@@ -10020,12 +10020,12 @@ h3 {
 }
 
 .chat-list .chat-img img {
-  border-radius: 50px;
+  border-radius: 15px;
   width: 100%;
 }
 
 .chat-list .chat-message {
-  border-radius: 50px;
+  border-radius: 15px;
   background: #5a99ee;
   display: inline-block;
   padding: 10px 20px;

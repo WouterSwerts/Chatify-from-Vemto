@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -24,14 +24,14 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
 
             <div class="card">
                 <div class="card-header">
                     Chat with USER
                     <button type="button" 
                     class="btn btn-sm btn-outline-primary float-right">
-                        Continue
+                        Continue Chat
                     </button>
                 </div>
                 <div class="card-body height3">

@@ -23,11 +23,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        $user = Auth::user();
-        $chatHistory = DB::table('ch_messages')->get();
-        //dd($chatHistory);
-        return view('home', compact('user'));
+        $user = Auth::user(); //data of the current user
+
+        $chatHistory = DB::table('ch_messages')
+        ->join('users as fromuser', 'ch_messages.from_id', '=', 'fromuser.id')
+        ->join('users as touser', 'ch_messages.to_id', '=', 'touser.id')
+        ->select('fromuser.name as from_user', 'touser.name as to_user', 'body', 'ch_messages.created_at')
+        ->where('from_id', '=', Auth::user()->id)
+        ->orWhere('to_id', '=', Auth::user()->id)
+        ->limit(10)
+        ->get();
+        
+        //dd($user,$chatHistory);
+        return view('home', compact('user', 'chatHistory'));
     }
 }

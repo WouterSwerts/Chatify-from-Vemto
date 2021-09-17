@@ -14,11 +14,14 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.9",
         "laravel/tinker": "^2.5",
-        "spatie/laravel-permission": "^3.17",
+        "laravel/ui": "^3.0",
         "livewire/livewire": "^2.0",
-        "laravel/ui": "^3.0"
+        "munafio/chatify": "^1.2",
+        "pusher/pusher-php-server": "^7.0",
+        "spatie/laravel-permission": "^3.17"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

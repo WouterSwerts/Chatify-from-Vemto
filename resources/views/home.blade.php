@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -22,17 +23,55 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="favorite-list-item">
-                <img src="{{ asset('/storage/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}" style="width: 250px;height:250px" alt="test">
-                <div data-id="{{ $user->id }}" data-action="0" class="avatar av-m" 
-                    style="background-image: url('{{ asset('/storage/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}');">
+
+        <div class="col-md-4">
+
+            <div class="content">
+                <div class="row">
+
+                    <div class="">
+                        <div class="card">
+                            <div class="card-header">
+                                Chat with USER
+                                <button type="button" 
+                                class="btn btn-sm btn-outline-primary float-right">
+                                    Continue
+                                </button>
+                            </div>
+                            <div class="card-body height3">
+                                <ul class="chat-list">
+                                    <li class="in">
+                                        <div class="img-fluid chat-img">
+                                            <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                                        </div>
+                                        <div class="chat-body">
+                                            <div class="chat-message">
+                                                <h5>Jimmy Willams</h5>
+                                                <p>Raw denim heard of them tofu master cleanse</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="out">
+                                        <div class="img-fluid chat-img">
+                                            <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                        </div>
+                                        <div class="chat-body">
+                                            <div class="chat-message">
+                                                <h5>Serena</h5>
+                                                <p>Next level veard</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <p>{{ strlen($user->name) > 5 ? substr($user->name,0,6).'..' : $user->name }}</p>
             </div>
+
         </div>
+
     </div>
 
 </div>

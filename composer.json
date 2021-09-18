@@ -14,9 +14,10 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.9",
         "laravel/tinker": "^2.5",
-        "spatie/laravel-permission": "^3.17",
+        "laravel/ui": "^3.0",
         "livewire/livewire": "^2.0",
-        "laravel/ui": "^3.0"
+        "munafio/chatify": "^1.2",
+        "spatie/laravel-permission": "^3.17"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
